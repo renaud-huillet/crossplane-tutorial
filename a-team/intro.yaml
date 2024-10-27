@@ -19,3 +19,17 @@ metadata:
   name: silly-demo-db-20241027213819-password
 data:
   password: SVdpbGxOZXZlclRlbGxAMQ==
+---
+apiVersion: devopstoolkitseries.com/v1alpha1
+kind: SQLClaim
+metadata:
+  name: silly-demo-db
+spec:
+  id: silly-demo-db-20241027213819
+  compositionSelector:
+    matchLabels:
+      provider: azure
+      db: postgresql
+  parameters:
+    version: "11"
+    size: small
